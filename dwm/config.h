@@ -6,7 +6,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=12" };
-static const char col_sel[]         = "#5c5c5c";
+static const char col_sel[]         = "#575757";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = {  "#bbbbbb",  "#222222",  "#444444" },
@@ -56,7 +56,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]    = { "dmenu_run_desktop", "-p", "run", NULL };
 static const char *termcmd[]     = { "alacritty", NULL };
 static const char *browsercmd[]  = { "firefox",   NULL };
-static const char *lockcmd[]  = { "slock",   NULL };
+static const char *lockcmd[]     = { "slock",   NULL };
 
 #include "shift-tools.c"
 
