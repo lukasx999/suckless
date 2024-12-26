@@ -57,6 +57,7 @@ static const char *dmenucmd[]    = { "dmenu_run_desktop", "-p", "run", NULL };
 static const char *termcmd[]     = { "alacritty", NULL };
 static const char *browsercmd[]  = { "firefox",   NULL };
 static const char *lockcmd[]     = { "slock",   NULL };
+static const char *zoomcmd[]     = { "boomer",   NULL };
 
 #include "shift-tools.c"
 
@@ -66,6 +67,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd    } },
     { MODKEY,                       XK_q,      spawn,          {.v = browsercmd } },
     { MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          {.v = lockcmd    } },
+    { MODKEY,                       XK_a,      spawn,          {.v = zoomcmd    } },
 
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
