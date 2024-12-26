@@ -1,9 +1,11 @@
+#define SCRIPT "~/suckless/dwmblocks/status.sh "
+
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"  ", "./status.sh memory",					5,		0},
-	{" ", "./status.sh time",					1,		0},
-	{" ", "./status.sh date",					5,		0},
+	{"  ", SCRIPT "memory",					5,		0},
+	{" ", SCRIPT "time",					1,		0},
+	{" ", SCRIPT "date",					5,		0},
 };
 
 //sets delimiter between status commands. NULL character ('\0') means no delimiter.
