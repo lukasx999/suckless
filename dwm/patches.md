@@ -2,3 +2,4 @@
 - vanitygaps
 - movestack
 - swallow
+- notitle
