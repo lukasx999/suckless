@@ -53,7 +53,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]    = { "dmenu_run_desktop", "-p", "run", NULL };
+// static const char *dmenucmd[]    = { "dmenu_run_desktop", "-p", "run", NULL };
+static const char *dmenucmd[]    = { "dmenu_run_desktop", "-l", "10", NULL };
 static const char *termcmd[]     = { "alacritty", NULL };
 static const char *browsercmd[]  = { "firefox",   NULL };
 static const char *lockcmd[]     = { "slock",   NULL };
