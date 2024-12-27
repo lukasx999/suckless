@@ -6,12 +6,18 @@ if [[ $# != 1 ]]; then
     exit 1
 fi
 
-widget=$1
+case $1 in
 
-case $widget in
+    "weather")
+        curl 'wttr.in/Graz?format=1' | awk '{ print $2 }'
+        ;;
+
+    "disk")
+        df -h | awk '/\s\/$/ { print $3 "/" $2 " (" $3 / $2 * 100 "%)" }' | sed 's/\.[0-9]*%/%/'
+        ;;
 
     "memory")
-        free -h | awk '/^Mem/ { print $3 "/" $2 }' | sed s/i//g
+        free -h | awk '/^Mem/ { print $3 "/" $2 " (" $3 / $2 * 100 "%)" }' | sed s/i//g | sed 's/\.[0-9]*%/%/'
         ;;
 
     "date")
@@ -20,6 +26,15 @@ case $widget in
 
     "time")
         date +"%H:%M:%S"
+        ;;
+
+    "capslock")
+        status=$(xset q | awk '/Caps Lock/ { print $4 }')
+        if [[ $status == "on" ]]; then
+            echo ' CAPS'
+        else
+            echo ' caps'
+        fi
         ;;
 
     *)
