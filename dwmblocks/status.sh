@@ -16,6 +16,7 @@ case $1 in
         df -h | awk '/\s\/$/ { print $3 "/" $2 " (" $3 / $2 * 100 "%)" }' | sed 's/\.[0-9]*%/%/'
         ;;
 
+    # FIXME: M instead of G causes bug
     "memory")
         free -h | awk '/^Mem/ { print $3 "/" $2 " (" $3 / $2 * 100 "%)" }' | sed s/i//g | sed 's/\.[0-9]*%/%/'
         ;;
