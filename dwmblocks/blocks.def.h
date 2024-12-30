@@ -4,7 +4,7 @@
 static const Block blocks[] = {
     /*Icon*/    /*Command*/        /*Update Interval*/    /*Update Signal*/
     { " ",  SCRIPT "capslock",                1,        1 },
-    { " ", SCRIPT "weather",                 5,        0 },
+    // { " ", SCRIPT "weather",                 5,        0 },
     { " ", SCRIPT "disk",                    5,        0 },
     { " ", SCRIPT "memory",                  5,        0 },
     { " ", SCRIPT "time",                    1,        0 },
