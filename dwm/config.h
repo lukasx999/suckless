@@ -55,7 +55,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 // static const char *dmenucmd[]    = { "dmenu_run_desktop", "-p", "run", NULL };
 static const char *dmenucmd[]   = { "dmenu_run_desktop", "-l", "10", NULL };
-static const char *runcmd[]     = { "xmenu_run", NULL };
+// static const char *runcmd[]     = { "imm", NULL };
 static const char *termcmd[]    = { "alacritty", NULL };
 static const char *browsercmd[] = { "firefox",   NULL };
 static const char *lockcmd[]    = { "slock",   NULL };
@@ -65,7 +65,7 @@ static const char *zoomcmd[]    = { "boomer",   NULL };
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
-    { MODKEY,                       XK_p,      spawn,          {.v = runcmd     } },
+    { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd     } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd    } },
     { MODKEY,                       XK_q,      spawn,          {.v = browsercmd } },
     { MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          {.v = lockcmd    } },
